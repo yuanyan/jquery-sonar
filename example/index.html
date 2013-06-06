@@ -7,6 +7,9 @@
     <style>
         body {
             background-color: #3851bc;
+            margin: 100px auto;
+            /*text-align: center;*/ /* do not use text align that will make sonar element lose location*/
+            width: 100px;
         }
 
         .icon {
@@ -17,20 +20,25 @@
             border-radius: 50%;
         }
 
-
-        .icon:hover {
-            box-shadow: 0 0 0 2px rgba(255,255,255,0.1), 0 0 10px 10px #3851bc, 0 0 0 10px rgba(255,255,255,0.5);
-            -webkit-transition:box-shadow 0.5s ease-out 75ms;
-            -moz-transition: box-shadow 0.5s ease-out 75ms;
-            transition: box-shadow 0.5s ease-out 75ms;
-
+        .icon:hover{
+            -webkit-transform: scale(0.8);
+            -moz-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            transform: scale(0.8);
+            opacity: 0.7;
+            -webkit-transition: -webkit-transform 0.2s, opacity 0.2s;
+            -moz-transition: -moz-transform 0.2s, opacity 0.2s;
+            transition: transform 0.2s, opacity 0.2s;
         }
 
     </style>
 </head>
 <body>
 
+
+
     <img class="icon" src="http://www.gravatar.com/avatar/8a27ebae306bac68b54c32832ded3e01?s=100">
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script src="../sonar.js"></script>
     <script>
